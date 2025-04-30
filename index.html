@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años de Andrea Orta Jaramillo</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <header class="carousel-header">
+        <div class="carousel-container">
+            <div class="carousel">
+              <img src="/images/foto1.JPG" alt="Andrea 1">
+              <img src="/images/foto3.JPG" alt="Andrea 2">
+            </div>
+          </div>
+          <div class="overlay-text">
+            <p>MIS XV AÑOS</p>
+            <h1>Andrea Orta Jaramillo</h1>
+            <p>31.05.2025</p>
+            
+          </div>
+          
+      </header>
+      
+
+    <section class="info">
+        <p>Gracias por ser parte de mi historia.
+          Este día marca el inicio de una nueva etapa, y me llena de alegría saber que lo compartiré con personas que han estado presentes en mi vida. Gracias por acompañarme.</p>
+        <h2>Con mucho amor, sus padres:</h2>
+        <p>Hilda Cecilia Jaramillo Talamantes & José de Jesús Orta Ruiz</p>
+        <p>Será una noche mágica llena de alegría, música, abrazos y buenos deseos. No sería lo mismo sin ti.</p>
+    </section>
+
+    <section class="foto-mensaje">
+        <div>
+          <img src="/images/foto.jpg" alt="Andrea 1">
+        </div>
+        <div class="ot-foto-mensaje">
+          <p>Los XV años son el comienzo de un nuevo camino.
+            Un momento para soñar en grande, para agradecer lo vivido y prepararse para todo lo hermoso que viene.</p>
+        </div>
+    </section>
+
+  
+
+    <section class="contador">
+        <h2>Faltan</h2>
+        <div id="countdown"></div>
+    </section>
+
+     <!-- Botón flotante de música -->
+  <div class="music-button">
+    <audio id="bg-music" loop>
+      <source src="/images/cancion.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio HTML5.
+    </audio>
+    <button onclick="toggleMusic()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="30px"  fill="#ffff"><path d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-422h240v160H560v400q0 66-47 113t-113 47Z"/></svg></button>
+  </div>
+
+     <!-- Itinerario animado -->
+  <section class="itinerario hidden">
+    <h2>Itinerario</h2>
+    <ul>
+      <li>7:00 PM - Misa</li>
+      <li>8:30 PM - Recepción</li>
+      <li>9:00 PM - Cena</li>
+      <li>10:00 PM - Baile de Andrea</li>
+      <li>12:00 AM - Pastel y brindis</li>
+    </ul>
+  </section>
+
+
+    <section class="dresscode">
+        <h2>Dress Code</h2>
+        <p>Formal elegante, tonos lila, plata o neutros. 🌸✨</p>
+    </section>
+
+    <section class="dresscode">
+        <h2>Lluvia de sobres</h2>
+        <p>Sobre o regalo</p>
+    </section>
+
+    <section class="buzon">
+        <h2>Buzón de deseos</h2>
+        <form>
+            <textarea placeholder="Escribe tu mensaje para Andrea aquí..."></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="galeria">
+        <h2>Galería de fotos</h2>
+        <div class="gallery">
+            <img src="/images/foto.jpg" alt="Andrea 1">
+            <img src="/images/foto.jpg" alt="Andrea 2">
+            <img src="/images/foto.jpg" alt="Andrea 3">
+            <img src="/images/foto.jpg" alt="Andrea 4">
+        </div>
+    </section>
+
+    <section class="asistencia">
+        <h2>Confirma tu asistencia</h2>
+        <p>Por WhatsApp: <a href="https://wa.me/" target="_blank">Haz clic aquí</a></p>
+        <p>O mediante el siguiente formulario:</p>
+        <a href="https://forms.gle/mUwqV2Kqjkukz7Az5" class="btn" target="_blank">Formulario de Confirmación</a>
+    </section>
+
+    <footer>
+        <p>Con cariño, Andrea 💜</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+  <script>
+    const music = document.getElementById("bg-music");
+    let isPlaying = false;
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+      } else {
+        music.play();
+      }
+      isPlaying = !isPlaying;
+    }
+
+    // Mostrar itinerario al hacer scroll
+    const itinerario = document.querySelector(".itinerario");
+    window.addEventListener("scroll", () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      const boxTop = itinerario.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        itinerario.classList.remove("hidden");
+      }
+    });
+  </script>
+
+
+  
+</body>
+</html>
