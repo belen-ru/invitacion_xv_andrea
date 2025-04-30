@@ -109,27 +109,24 @@ section {
     height: auto;
     object-fit: cover;
   }
-  .imagen-principal {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
+ 
 
   .overlay-text {
-    
-   
     position: absolute;
     top: 30px;
     right: 190px;
     z-index: 1000;
     text-align: left;
-    color: red;
+    color: white;
 
-    
-   
   }
 
+  @media (max-width: 768px) {
+    .imagen-principal {
+      object-fit: contain;
+    }
+  }
+  
   .overlay-text p{
     margin: 0%;
   }
