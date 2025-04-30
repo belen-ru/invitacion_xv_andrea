@@ -122,11 +122,11 @@ section {
   }
 
   @media (max-width: 768px) {
-    .imagen-principal {
-      object-fit: contain;
-    }
+  .imagen-principal {
+    object-fit: contain;
   }
-  
+}
+
   .overlay-text p{
     margin: 0%;
   }
