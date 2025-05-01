@@ -63,6 +63,18 @@ h2{
   .itinerario {
     transition: opacity 1s ease, transform 1s ease;
   }
+
+  .ropa {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+  }
+  
+  .ropa.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   
   .hidden {
     opacity: 0;

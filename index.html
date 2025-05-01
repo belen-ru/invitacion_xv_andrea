@@ -84,9 +84,7 @@
         <h2>Dress Code</h2>
         <p>Formal elegante</p>
         <img src="/images/MUGRERO DE BELÉN 9 (1).gif" class="brillo" loading="lazy">
-       
-        <img src="/images/7.png" loading="lazy">
-       
+        <img src="/images/7.png" class="ropa" loading="lazy">
     </section>
 
     <section class="dresscode">
@@ -146,7 +144,24 @@
         itinerario.classList.remove("hidden");
       }
     });
+    
+    const ropa = document.querySelector('.ropa');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      ropa.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5 // 50% visible para activar
+});
+
+observer.observe(ropa);
+
+
   </script>
+
 
 
   
