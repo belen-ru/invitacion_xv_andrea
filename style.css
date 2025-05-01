@@ -3,6 +3,7 @@
 :root{
   --font-titulos: 'Corinthia', cursive;
   --font-texto:'Poppins', sans-serif;
+  --lila: #caa3d6;
 }
 
 body {
@@ -103,8 +104,8 @@ section {
 
   .overlay-text {
     position: absolute;
-    top: 30px;
-    right: 190px;
+    top: 20px;
+    left: 20px;
     z-index: 1000;
     text-align: left;
     color: white;
@@ -155,6 +156,38 @@ textarea {
     cursor: pointer;
     font-size: 20px;
   }
+
+  .dresscode{
+    background-color: var(--lila);
+  }
+
+ 
+
+  .dresscode h2{
+    margin-bottom: 0;
+  }
+
+  .dresscode p{
+    margin-top: 0.5rem;
+  }
+.dresscode > .brillo{
+  position: absolute;
+  width: 100%;
+  right: 10px;
+  top: 2440px;
+  height: fit-content;
+}
+
+.dresscode img{
+  height: 280px;
+  margin-top: 1rem;
+  z-index: 1000;
+}
+
+
+
+
+  
 
 footer {
     background: #ede7f6;
