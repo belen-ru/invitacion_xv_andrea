@@ -29,6 +29,8 @@ h1, h2 {
 
 h2{
   color:#9575cd;
+  font-size: 3rem;
+  font-weight:700;
 }
 
 
@@ -54,16 +56,7 @@ h2{
     transition: opacity 1s ease, transform 1s ease;
   }
 
-  .ropa {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease-in-out;
-  }
-  
-  .ropa.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
   
   
   .hidden {
@@ -106,15 +99,16 @@ section {
     
   }
   
- 
+  
 
   .overlay-text {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 1000;
-    text-align: left;
+    text-align: center;
     color: white;
+    
 
   }
 
@@ -143,7 +137,43 @@ textarea {
 
 .buzon{
     background-color: #d8b4fe;
+    padding: 2rem;
+    max-width: 100%;
+  box-sizing: border-box;
 }
+
+.buzon h2{
+  margin: 0;
+  color: white;
+}
+
+.buzon p{
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.buzon button{
+  padding: 0.5rem 1rem;
+  border-color: transparent;
+  border-radius: 30px;
+  background-color: #9575cd;
+  color:white;
+  font-family: var(--font-texto);
+  font-size:1rem;
+}
+
+.buzon textarea{
+  
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+  font-family: var(--font-texto);
+  box-sizing: border-box;
+  resize: vertical; /* opcional: evita que el usuario cambie el ancho */
+  margin-bottom: 1rem;
+}
+
 
 
 
@@ -163,19 +193,26 @@ textarea {
     font-size: 20px;
   }
 
+
   .dresscode{
     background-color: var(--lila);
+    padding-bottom: 2rem;
+    margin: 1.5rem 2rem;
+    border-radius: 25px;
+    z-index: 1000;
   }
 
- 
-
   .dresscode h2{
-    margin-bottom: 0;
+    margin: 0;
+    color: white;
+    
   }
 
   .dresscode p{
     margin-top: 0.5rem;
+    
   }
+
 .dresscode > .brillo{
   position: absolute;
   width: 100%;
@@ -184,10 +221,10 @@ textarea {
   height: fit-content;
 }
 
-.dresscode img{
-  height: 280px;
+.dresscode > .ropa{
+  height: 240px;
   margin-top: 1rem;
-  z-index: 1000;
+  
 }
 
 
