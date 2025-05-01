@@ -12,6 +12,6 @@ const x = setInterval(() => {
     countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     if (distance < 0) {
         clearInterval(x);
-        countdown.innerHTML = "¡Ya es el gran día!";
+        countdown.innerHTML = "¡Es Hoy! ¡Ya es el gran día!";
     }
 }, 1000);

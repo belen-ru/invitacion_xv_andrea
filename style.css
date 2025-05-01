@@ -46,6 +46,10 @@ h2{
     background-color:#d8b4fe;
 }
 
+.contador h2{
+  margin: 0;
+}
+
 .itinerario hidden {
     padding: 20px;
     max-width: 600px;
@@ -174,6 +178,15 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.sobres img{
+  height: 80px;
+  width: auto;
+  padding: 20px;
+}
+
+.sobres h2{
+  margin-bottom: 0;
+}
 
 
 
