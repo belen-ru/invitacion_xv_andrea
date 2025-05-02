@@ -30,10 +30,17 @@
             <p>31.05.2025</p>
           </div>
     </header>
+
+    <div class="decora">
+      <img src="/images/21.png" loading="lazy" class="mariposa">
+      <img src="/images/36.png" loading="lazy" class="arco"> 
+      
+    </div>
       
 
-    <section class="texto-entrada">
-        <p>Con mucha alegría y gratitud, quiero compartir con ustedes un momento muy especial en mi vida. Ha llegado el día de mis XV años, un sueño hecho realidad, y será un honor contar con su presencia para celebrarlo juntos.</p>
+    <section class="texto-entrada-1">
+      
+        <p class="texto">Con mucha alegría y gratitud, quiero compartir con ustedes un momento muy especial en mi vida. Ha llegado el día de mis XV años, un sueño hecho realidad, y será un honor contar con su presencia para celebrarlo juntos.</p>
         <p>Agradezco profundamente a quienes con amor y dedicación hen hecho posible este día tan especial.</p>
         <img src="/images/3.png" loading="lazy">
         <div class="padres">
@@ -96,7 +103,7 @@
     <button onclick="toggleMusic()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="30px"  fill="#ffff"><path d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-422h240v160H560v400q0 66-47 113t-113 47Z"/></svg></button>
   </div>
 
-     <!-- Itinerario animado -->
+     <!-- Itinerario animado 
   <section class="itinerario hidden">
     <h2>Itinerario</h2>
     <ul>
@@ -108,6 +115,8 @@
     </ul>
   </section>
 
+  -->
+
   <div class="principal-container">  
     <img src="/images/foto1.webp" alt="Descripción" class="imagen-responsiva" loading="lazy">
   </div>
@@ -116,6 +125,7 @@
     <section class="dresscode">
         <h2>Dress Code</h2>
         <p>Formal elegante</p>
+        
         <img src="/images/MUGRERO DE BELÉN 9 (1).gif" class="brillo" loading="lazy">
         <img src="/images/7.png" class="ropa" loading="lazy">
     </section>
@@ -194,22 +204,36 @@
       }
     });
     
-    const ropa = document.querySelector('.ropa');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      ropa.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.5 // 50% visible para activar
-});
-
-observer.observe(ropa);
-
-
   </script>
+
+<script>
+  const ropaImg = document.querySelector('.ropa');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  observer.observe(ropaImg);
+</script>
+
+<script>
+  const textoEntrada = document.querySelector('.texto-entrada');
+
+  const observer1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  observer.observe(textoEntrada);
+</script>
+
 
 
 

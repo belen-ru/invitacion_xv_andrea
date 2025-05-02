@@ -15,3 +15,20 @@ const x = setInterval(() => {
         countdown.innerHTML = "¡Es Hoy! ¡Ya es el gran día!";
     }
 }, 1000);
+
+// Animación de aparición a la derecha para mariposa
+const mariposa = document.querySelector('.mariposa');
+
+const observarMariposa = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+if (mariposa) {
+  observarMariposa.observe(mariposa);
+}

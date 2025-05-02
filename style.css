@@ -46,26 +46,67 @@ button{
 }
 
 
-
 .imagen-responsiva {
   width: 100%;
   height: auto;
   display: block;
+  
 }
 
-.texto-entrada img{
+.decora{
+  display: grid;
+  
+  justify-items: center;
+}
+
+.arco{
+  width: 100%;
+  height: auto;
+  display: block;
+ 
+}
+
+.mariposa{
+  width: 35%;
+  height: auto;
+  display: grid;
+  position: absolute;
+  justify-self: center;
+  align-self: flex-end;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+ 
+}
+
+.mariposa.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.texto-entrada-1 img{
 width: 100%;
 height: auto;
 display: block;
+margin-top: 2rem;
+margin-bottom: 2rem;
 }
+
+.texto-entrada-1{
+  padding: 1rem 2rem ;
+}
+
+
+
+
+
 
 .padres h2{
   margin: 0.5rem;
 }
 
-.padres h3{
-  margin: 0;
-}
+
 
 
 .contador{
@@ -84,7 +125,7 @@ display: block;
   margin: 0;
 }
 
-.recepcion button, .recepcion p{
+.recepcion button,.misa button, .recepcion p{
   
   align-self: center; /* o flex-start, o flex-end según alineación deseada */ 
 }
@@ -300,11 +341,17 @@ textarea {
     
   }
 
+  .dresscode .deco{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
 .dresscode > .brillo{
   position: absolute;
   width: 100%;
   right: 10px;
-  top: 2440px;
+  top: 4000px;
   height: fit-content;
 }
 
@@ -312,6 +359,18 @@ textarea {
   height: 240px;
   margin-top: 1rem;
   
+  
+}
+
+.ropa {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.ropa.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
